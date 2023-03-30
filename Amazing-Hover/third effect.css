@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div{
+    width: 700px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+div a{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: #eee;
+    position: relative;
+    transition: .3s;
+}
+div a:hover{
+    background: rebeccapurple;
+    color: white;
+    box-shadow: 0 0 10px rebeccapurple;
+}
+div a::after{
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    border-top: 5px solid rebeccapurple;
+    border-left: 5px solid rebeccapurple;
+    opacity: 0;
+    transition: .3s;
+}
+div a:hover::after{
+    opacity: 1;
+    width: 50%;
+    height: 25px;
+}
+div a::before{
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    border-bottom: 5px solid rebeccapurple;
+    border-right: 5px solid rebeccapurple;
+    opacity: 0;
+    transition: .3s;
+}
+div a:hover::before{
+    opacity: 1;
+    width: 50%;
+    height: 25px;
+}

@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div{
+    width: 700px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+div a{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: #eee;
+    position: relative;
+    transition: .3s;
+}
+div a:hover{
+    background: rebeccapurple;
+    color: white;
+    box-shadow: 0 0 10px rebeccapurple;
+}
+div a::after{
+    content: '';
+    width: 50%;
+    position: absolute;
+    left: -100%;
+    height: 5px;
+    border-radius: 5px;
+    background: rebeccapurple;
+    bottom: -10px;
+    opacity: 0;
+    transition: .3s;
+}
+div a:hover::after{
+    left: 25%;
+    opacity: 1;
+}
